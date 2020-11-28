@@ -1,2 +1,2 @@
-# octomachine
+# octo-machine
 machine learning playground
