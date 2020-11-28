@@ -1,0 +1,20 @@
+Read this article to setup conda https://github.com/fastai/fastai1/blob/master/README.md#conda-install
+
+##Setup virtual env for fastai
+conda update conda
+conda create -y python=3.6 --name fastai-3.6
+conda activate fastai-3.6
+conda install -y conda
+conda install -y pip setuptools
+
+
+## Developer Install
+The following instructions will result in a pip editable install, so that you can git pull at any time and your environment will automatically get the updates:
+
+git clone https://github.com/fastai/fastai1
+cd fastai1
+tools/run-after-git-clone
+pip install -e ".[dev]"
+
+# Start the jupyter notebook
+jupyter notebook
