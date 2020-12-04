@@ -6,6 +6,7 @@ conda create -y python=3.6 --name fastai-3.6
 conda activate fastai-3.6
 conda install -y conda
 conda install -y pip setuptools
+conda install -c pytorch -c fastai fastai=1.0.61
 
 
 # Developer Install
