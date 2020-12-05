@@ -19,3 +19,25 @@ pip install -e ".[dev]"
 
 # Start the jupyter notebook
 jupyter notebook
+
+
+#Debugging installation issues from https://fastai1.fast.ai/troubleshoot.html
+Tell me which environment modules are imported from:
+
+import sys
+print(sys.path)
+Tell me which fastai library got loaded (we want to know the exact location)
+
+import sys, fastai
+print(sys.modules['fastai'])
+At times a quick hack can be used to get your first notebook working and then sorting out the setup. Say you checked out fastai to /tmp/:
+
+cd /tmp/
+git clone https://github.com/fastai/fastai1
+cd fastai1
+So now you know that your uninstalled fastai1 is located under /tmp/fastai1/. Next, put the following on the very top of your notebook:
+
+import sys
+sys.path.append("/tmp/fastai1")
+import fastai
+and it should just work. Now, go and sort out the rest of the installation, so that you don’t need to do it for every notebook.
