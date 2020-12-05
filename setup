@@ -4,6 +4,9 @@ Read this article to setup conda https://github.com/fastai/fastai1/blob/master/R
 conda update conda
 conda create -y python=3.6 --name fastai-3.6
 conda activate fastai-3.6
+conda install -c fastai -c pytorch -c anaconda fastai gh anaconda
+conda install -c conda-forge librosa
+
 conda install -y conda
 conda install -y pip setuptools
 conda install -c pytorch -c fastai fastai=1.0.61
